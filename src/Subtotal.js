@@ -1,6 +1,6 @@
 import React from 'react'
 import './Subtotal.css'
-import CurrencyFormat from 'react-currency-format';
+import CurrencyFormat from 'react-currency-format';  
 import { useStateValue } from './StateProvider';
 import { getBasketTotal } from './reducer';
 import {useNavigate} from "react-router-dom"
@@ -11,7 +11,7 @@ function Subtotal() {
 
   const sendSubmit = () => {
     navigate("/payment");
-};
+}
   return (
     <div className='subtotal'>
       <CurrencyFormat

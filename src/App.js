@@ -8,6 +8,13 @@ import Login from './Login';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
 import Payment from './Payment';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js"
+import Orders from './Orders';
+
+//loadStripe:
+const promise = loadStripe('pk_test_51MrPTtSA4AQcOAQXWlfBXzGRUB8anYXzh0QoZKNJGK9VUUi8iWaiENOHltUKiuhazhyKVZkq6u5DdxIVENswo5Em00VD9HebRR');
+// pk_test_51MrPTtSA4AQcOAQXWlfBXzGRUB8anYXzh0QoZKNJGK9VUUi8iWaiENOHltUKiuhazhyKVZkq6u5DdxIVENswo5Em00VD9HebRR
 
 function App() {
 
@@ -31,7 +38,7 @@ function App() {
       }
 
     })
-  })
+  }, [])
   return (
     //BEM
     <Router>
@@ -49,10 +56,10 @@ function App() {
 
           </React.Fragment>
         } />
-        <Route path="/order" element={
+        <Route path="/orders" element={
           <React.Fragment>
             <Header />
-
+            <Orders />
           </React.Fragment>
         } />
         <Route path="/checkout" element={
@@ -64,7 +71,9 @@ function App() {
         <Route path="/payment" element={
           <React.Fragment>
             <Header />
-            <Payment/>
+            <Elements stripe={promise}>  {/*//higher order function && it wrap the payment component* */}
+              <Payment />
+            </Elements>
           </React.Fragment>
         } />
       </Routes>
