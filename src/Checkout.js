@@ -33,3 +33,6 @@ function Checkout() {
 }
 
 export default Checkout;
+
+
+//The useStateValue hook is typically used in conjunction with a Context object to access and modify the global state of an application. It returns an array containing the current state and dispatch function.

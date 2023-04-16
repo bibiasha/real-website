@@ -22,3 +22,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+//StateProvider=> It takes two props: initialState and reducer. These props are used to set up a global state management system using the React useReducer hook.

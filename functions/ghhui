@@ -1,0 +1,18 @@
+var car =new Vehicle("Honda","white","2010","UK");
+console.log(car);
+function Vehicle(model, color, year, country)
+{this.model = model;
+this.color = color;
+this.year = year;
+this.country = country; }
+
+
+let drink= new Variety("daru", "beer", "softdrink", "coke")
+console.log(drink);
+function Variety(desi,foreign,kid,normal)
+{
+    this.desi=desi;
+    this.foreign=foreign;
+    this.kid=kid;
+    this.normal=normal;
+} 

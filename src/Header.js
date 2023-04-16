@@ -41,10 +41,6 @@ function Header() {
                 </div>
                 </Link>
 
-                <div className='header_option'>
-                    <span className='header_optionLineOne'>Your</span>
-                    <span className='header_optionLineTwo'>Prime</span>
-                </div>
                 <Link to="/checkout">
                     <div className='header_optionBasket'>
                         <ShoppingCartIcon />
@@ -57,4 +53,7 @@ function Header() {
 }
 
 export default Header;
+
+
+//if the user variable is truthy (meaning a user is currently logged in), the auth.signOut() method is called, which will sign the user out of the current session or device. This could involve invalidating any authentication tokens or cookies, or performing other actions to revoke the user's access to the application or website.
 
