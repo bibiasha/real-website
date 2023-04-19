@@ -62,7 +62,7 @@ function DeliveryForm() {
         <div className='container'>
             <div className='payment_section'>
                 <div className='payment_title'>
-                    <h3>Review items and delivery</h3>
+                    <h3>Review items</h3>
                 </div>
                 <div className='payment_items'>
                     {basket.map(item => (

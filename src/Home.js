@@ -3,6 +3,7 @@ import "./Home.css";
 import Product from './Product';
 import Header from './Header';
 
+
 function Home() {
   return (
     <div className="home">
@@ -10,7 +11,7 @@ function Home() {
      <img  className='home_image'
      src="https://img.freepik.com/premium-psd/shop-sign-mockup-black-wall_35913-2097.jpg?w=826" alt=""/>
      <div className='home_row'>
-       <Product id='23' title="Visiting Card" price={2} image= 'https://previews.123rf.com/images/isroil/isroil2203/isroil220300089/183358768-business-card-design.jpg' rating={5}/>
+        <Product id='23' title="Visiting Card" price={2} image= 'https://previews.123rf.com/images/isroil/isroil2203/isroil220300089/183358768-business-card-design.jpg' rating={5}/>
        <Product id='2' title="Small Board" price={1000} image= 'https://cdn.dribbble.com/users/2405927/screenshots/9108435/media/60e4ffc651003a855cd2a86fa67ad77a.jpg?compress=1&resize=800x600&vertical=top' rating={5}/>
      </div>
      <div className='home_row'>
@@ -21,8 +22,8 @@ function Home() {
      </div>
      <div className='home_row'>
      <Product id='293' title="LARGE SIZE SIGN BOARDS" price={10000} image= 'https://www.creativeconcepts.in/images/products/led-signages.jpg' rating={5}/>
-     </div>
-     </div>
+  </div>
+     </div> 
     </div>
   )
 }

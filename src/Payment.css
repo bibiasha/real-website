@@ -27,10 +27,9 @@
     border-bottom: 1px solid lightgray;
 }
 
-
-
 .payment_address, .payment_items, .payment_details{
-    flex: 0.8;
+   margin:20px 0;
+   margin-left: 5px;
 }
 
 .payment_details > form{
@@ -51,4 +50,5 @@
     margin-top: 10px;
     border-color:rgb(31, 172, 96) rgb(19, 110, 45) rgb(11, 91, 49);
     color:#111;
+    cursor: pointer;
 }

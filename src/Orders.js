@@ -1,36 +1,50 @@
-import React, { useEffect, useState } from 'react'
-import './Orders.css'
-import { db } from './firebase';
-import { useStateValue } from './StateProvider';
 import Order from './Order';
+import { useState, useEffect } from "react";
+import './Orders.css';
 
-function Orders() {
-  const [{ basket, user }, dispatch] = useStateValue();
+const Orders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
+    const fetchOrders = async () => {
+      const res = await fetch(
+        "https://mr-signboards-default-rtdb.firebaseio.com/customers.json"
+      );
+      const data = await res.json();
+      console.log(data);
+      // Convert the object of objects to an array of objects
+      const ordersArray = Object.values(data);
+      console.log(ordersArray);
+      setOrders(ordersArray);
+    };
 
-  if(user){
-    db.collection('users').doc(user?.uid).collection('orders').orderBy('created','desc').onSnapshot(snapshot =>{
-      setOrders(snapshot.docs.map(doc =>[{
-        id:doc.id,
-        date: doc.data()
-      }]))
-    })}else{
-      setOrders([])
-    }
-  }, [user])
+    fetchOrders();
+  }, []);
 
   return (
-    <div className='orders'>
-      <h1>Your Orders</h1>
-      <div className='orders_order'>
-        {orders?.map(order=>(
-          <Order order={order}/>
-       ) )}
-      </div>
+    <div className='container'>
+      {orders.map((order, index) => (
+        <div className='details' key={index}>
+          {order.customer && (
+            <h2>Customer: {order.customer.name}</h2>
+          )}
+          {order.customer && (
+            <p>Phone: {order.customer.phone}</p>
+          )}
+          {order.customer && (
+            <p>Address: {order.customer.address}</p>
+          )}
+          <div className='products'>
+            <Order order={order} />
+          </div>
+          {order.products && Object.keys(order.products).map((key) => (
+            <h3 key={key}>Product: {order.products[key].title}</h3>
+          ))}
+          
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Orders
+export default Orders;

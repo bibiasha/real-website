@@ -1,59 +1,63 @@
 .container{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background-color: white;
-    width: 300px;   
+    align-items: center;
+    margin: 20px;
 }
 
-.payment_items{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 140px;
-    background-color: white;
-}
-
-.payment_title >h3{
-  display: flex;
-  padding-bottom: 20px;
-  border-bottom: 1px solid lightgray;
+.payment_section{
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .delivery{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: white;
-    width: 300px;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    padding: 20px;
+    width: 100%;
 }
 
 .payment_items{
-    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .payment_title{
-    flex: 0.2;
+   margin:10px 0 
+}
+
+.delivery label{
+    display:block;
+    margin:10px 0;
+    font-weight:bold;
 }
 
 .delivery > input{
-    width: 98%;
-    height: 30px;
-    margin-bottom: 10px;
-    background-color: white;
+    display: block;
+    width: 100%;
+    padding:10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
 .delivery > button{
-    background-color: rgb(22, 149, 65);
-    border-radius: 2px;
-    width: 100%;
-    height: 30px;
-    border:1px solid;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(85, 207, 72)  rgb(33, 190, 72) rgb(16, 138, 41);
-}
+   background-color:#32ae42 ;
+   border: 1px solid #217d21;
+   border-radius: 5px;
+   padding: 10px;
+   cursor: pointer;
+   color: #111;
+   font-weight: bold;
+   font-size: 16px;
+   transition: all 0.3s ease;
+} 
+
+.delivery button:hover {
+    background-color: #ddb347;
+    border: 1px solid #9c7e31;
+  }
+
+
+
+  /* In the CSS code given above, transition: all 0.3s ease; is used to apply a transition effect to all CSS properties with a duration of 0.3 seconds and an easing function of "ease" (which means the transition starts slowly, accelerates in the middle, and slows down again at the end). */
