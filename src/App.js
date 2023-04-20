@@ -41,7 +41,7 @@ function App() {
   }, []) //[]->code only runs once
   return (
     //BEM
-    <BrowserRouter basename="/real-website">
+    <Router>
       <Routes>    
 
         <Route path="/" element={
@@ -78,7 +78,7 @@ function App() {
           </React.Fragment>
         } />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

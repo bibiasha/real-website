@@ -1,5 +1,5 @@
 {
-  "homepage": "https://bibiasha.github.io/real-website/",
+  "homepage": "https://bibiasha.github.io/real-website",
   "name": "website",
   "version": "0.1.0",
   "private": true,
@@ -21,6 +21,7 @@
     "font-awesome": "^4.7.0",
     "node.js": "^0.0.1-security",
     "react": "^18.2.0",
+    "react-currency-format": "^1.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-redux": "^8.0.5",
@@ -35,7 +36,7 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "npm run build -- --homepage",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
